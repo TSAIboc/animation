@@ -1,0 +1,66 @@
+.keyboard {
+    background-color: black;
+    opacity: 0.6;
+    width: 100vw;
+    height: 200px;
+    display: grid;
+    grid-template-areas:
+        'state state state state state state'
+        '. . emo curve . .'
+        '. . . . . .';
+    grid-template-rows: 30px 1fr 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    .state {
+        color: white;
+        grid-area: state;
+        text-align: center;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .emo {
+        height: 100%;
+        display: grid;
+        grid-area: emo;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-row-gap: 8px;
+        grid-column-gap: 5px;
+        padding: 0px 15px;
+
+        &>Button {
+            height: 100%;
+            width: 90px;
+        }
+    }
+
+    .curve {
+        display: grid;
+        grid-area: curve;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 5px;
+
+        &>Button {
+            height: 100%;
+            align-content: center;
+        }
+    }
+
+    .ant-btn-default {
+        height: min-content;
+        font-weight: bold;
+        padding: 0px;
+
+        &:hover {
+            border-color: #d9d9d9 !important;
+        }
+
+        &:active {
+            background-color: lightgray;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.canvas {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.description{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    bottom: 200px;
+    width: 100vw;
+    pointer-events: none;
+    line-height: 25px;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0px;
+}

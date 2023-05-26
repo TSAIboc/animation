@@ -13,4 +13,4 @@
     * pass ui component data to canvas
 * gltf format
 
-demo : [robot animation](https://animation-umber-nine.vercel.app/)
+demo : [Robot animation](https://animation-sigma.vercel.app/)

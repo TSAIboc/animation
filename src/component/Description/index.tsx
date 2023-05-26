@@ -2,16 +2,16 @@ const Description = () => {
     return (
         <section style={{ fontSize: 18, display : 'flex' }}>
             <div style={{ padding: 6 }}>
-                ' Mouse Right ' Rotation    <br />
-                ' Mouse Wheel ' Zoom in/out <br />
-                ' Mouse Wheel ' Pan   <br />
+                &#39; Mouse Right &#39; Rotation    <br />
+                &#39; Mouse Wheel &#39; Zoom in/out <br />
+                &#39; Mouse Wheel &#39; Pan   <br />
             </div>
             <div style={{ padding: 6 }}>
-                ' W,A,S,D ' to move <br />
-                ' Left Click ' on grid to move<br />
-                ' Space ' to jump<br />
-                ' Shift ' to change ' Running ' or ' Walking '<br />
-                ' Drag red points ' to change curve
+                &#39; W,A,S,D &#39; to move <br />
+                &#39; Left Click &#39; on grid to move<br />
+                &#39; Space &#39; to jump<br />
+                &#39; Shift &#39; to change &#39; Running &#39; or &#39; Walking &#39;<br />
+                &#39; Drag red points &#39; to change curve
             </div>
         </section>
     )

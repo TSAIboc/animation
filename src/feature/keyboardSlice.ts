@@ -11,11 +11,9 @@ const keyboardSlice = createSlice({
     reducers: {
         excutebotAction(state, action) {
             state.state = action.payload;
-            console.log(1);
         },
-        excuteButtonClick(state, action) {
+        excuteButtonClick(state) {
             state.isButtonClick = !state.isButtonClick;
-            console.log(2);
         }
     }
 });

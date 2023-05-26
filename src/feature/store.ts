@@ -1,6 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
 import keyboardSlice from "./keyboardSlice";
-import canvasSlice from "./canvasSlice";
 
 const store = configureStore({
     reducer: {

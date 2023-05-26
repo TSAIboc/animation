@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { Editor3D } from '@types/3d';
+import { Editor3D } from '@type/index';
 
 const Canvas = (props: { id: string, editor: Editor3D }) => {
     const { id, editor } = props;

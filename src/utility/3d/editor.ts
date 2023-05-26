@@ -1,6 +1,6 @@
 "use client";
 import * as THREE from 'three';
-import { Editor3D } from '@types/3d';
+import { Editor3D } from '@type/index';
 import Camera from './cameras/camera';
 import Light from './lights/light';
 import { ArcballControls } from 'three/examples/jsm/controls/ArcballControls';

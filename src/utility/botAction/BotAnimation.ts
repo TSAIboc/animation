@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { actionTypes } from '@type/index';
 
 type baseType = {
     [action: string]: { [weight: string]: number }
@@ -6,8 +7,6 @@ type baseType = {
 type actionContent = {
     [propName: string]: THREE.AnimationAction
 }
-export type actionTypes = 'Idle' | 'Walking' | 'Running' | 'Dance' | 'Death' | 'Sitting' |
-    'Standing' | 'Jump' | 'Yes' | 'No' | 'Wave' | 'Punch' | 'ThumbsUp';
 //TODO: fadeIn/fadeOut between 'Running' and 'Walking'
 class BotAnimation {
     private _baseTypes: baseType;

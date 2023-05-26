@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { stateSeletor } from '@feature/keyboardSlice';
 import Canvas from './Canvas';
+import { actionTypes } from '@type/index';
 
 import useBot from '@useHook/useBot';
 import useEditor from '@useHook/useEditor';
@@ -28,7 +29,7 @@ const CanvasDraw = () => {
     }, [Bot2Model]);
 
     useEffect(() => {
-        if (Bot) Bot.onClick(action.state);
+        if (Bot) Bot.onClick(action.state as actionTypes);
     }, [action.isButtonClick])
 
     return (

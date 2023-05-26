@@ -24,7 +24,7 @@
       "@utility/*": ["./src/utility/*"],
       "@component/*": ["./src/component/*"],
       "@feature/*": ["./src/feature/*"],
-      "@types/*": ["./src/types/*"],
+      "@type/*": ["./src/type/*"],
       "@useHook/*": ["./src/useHook/*"],
       "@constant/*": ["./src/constant/*"],
     }

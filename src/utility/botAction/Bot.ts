@@ -2,8 +2,8 @@
 import * as THREE from 'three';
 import { actionKeys } from '@constant/constants';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import Editor3D from '../3d/editor';
-import BotAnimation, { actionTypes } from './BotAnimation';
+import { Editor3D, actionTypes } from '@type/index';
+import BotAnimation from './BotAnimation';
 import KeyControl from './KeyControl';
 import MousePoint from './MousePoint';
 import CurveControl from './CurveControl';
@@ -64,7 +64,7 @@ class BotAction extends THREE.EventDispatcher {
         this._editor = editor;
     }
 
-    load = (path: string, callback) => {
+    load = (path: string, callback?: React.Dispatch<React.SetStateAction<THREE.Object3D | null>>) => {
         if (!this._editor) return;
         const loader = new GLTFLoader();
         loader.load(path,

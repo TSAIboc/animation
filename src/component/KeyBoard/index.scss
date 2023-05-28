@@ -39,6 +39,7 @@
         grid-area: curve;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 5px;
+        width: 180px;
 
         &>Button {
             height: 100%;

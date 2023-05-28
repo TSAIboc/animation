@@ -10,7 +10,7 @@ import CurveControl from './CurveControl';
 
 enum MoveTypeVelocity {
     Walking = 0.07,
-    Running = 0.15
+    Running = 0.2
 }
 
 class BotAction extends THREE.EventDispatcher {
@@ -181,11 +181,7 @@ class BotAction extends THREE.EventDispatcher {
         let extraPassPoints = this._computePassPosition(this._modelEndPosition, position, this._velocity * 0.2);
         this._movePassPosition = [...currentPassPoints, ...passPoints, ...extraPassPoints];
 
-        let d1 = position.distanceTo(passPoints[0]);
-        let d2 = position.distanceTo(this._modelEndPosition);
-        let distance = this._CurveContorl.distance + d1 + d2;
-
-        this._timeInterval = this._totalTimes / (distance / this._velocity);
+        this._timeInterval = this._totalTimes / (this._CurveContorl.distance / this._velocity);
     }
 
     _botMouseSpaceMove = (event: { [type: string]: THREE.Vector3 }) => {
@@ -241,6 +237,7 @@ class BotAction extends THREE.EventDispatcher {
             this.setbotAction('Idle');
             this._animate = false;
             this._model.quaternion.x = this._model.quaternion.z = 0;
+            this._model.position.y = 0;
             this._model.up.copy(new THREE.Vector3(0, 1, 0));
             this._setControlEnabled(true);
         }
@@ -268,8 +265,9 @@ class BotAction extends THREE.EventDispatcher {
         let normal = new THREE.Vector3(0, 0, 1).cross(tangent).normalize();
 
         //if normal is (0, 1 ,0) or (0, -1 ,0) , it will not change the model up ( only move on grid )
-        let copynormal = normal.x == 0 ? new THREE.Vector3(0, 1, 0) : normal;
+        let copynormal = Math.abs(normal.x) < 0.0001 ? new THREE.Vector3(0, 1, 0) : normal;
         up.copy(copynormal);
+
     }
 
     //W,A,S,D motion
